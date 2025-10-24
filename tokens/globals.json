@@ -1,0 +1,43 @@
+{
+  "color": {
+    "brand": {
+      "primary": { "value": "#0052cc" },
+      "secondary": { "value": "#ff8b00" }
+    },
+    "background": {
+      "base": { "value": "#ffffff" },
+      "subtle": { "value": "#f4f5f7" },
+      "surface": { "value": "{color.background.base.value}" }
+    },
+    "text": {
+      "base": { "value": "#172b4d" },
+      "link": { "value": "{color.brand.primary.value}" }
+    },
+    "border": {
+      "base": { "value": "#dfe1e6" }
+    }
+  },
+  "font": {
+    "family": {
+      "base": {
+        "value": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif"
+      }
+    }
+  },
+  "spacing": {
+    "base": { "value": "1rem" },
+    "xs": { "value": "0.25rem" },
+    "sm": { "value": "0.5rem" },
+    "md": { "value": "1rem" },
+    "lg": { "value": "1.5rem" },
+    "xl": { "value": "2rem" }
+  },
+  "shadow": {
+    "card": {
+      "value": "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)"
+    }
+  },
+  "border": {
+    "radius": { "value": "8px" }
+  }
+}

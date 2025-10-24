@@ -1,0 +1,16 @@
+<!--
+  This is NOT a full HTML page. It's a fragment containing
+  Turbo Stream instructions.
+  - action="append": Add the new content inside the target.
+  - target="items-container": The element to add to.
+-->
+<turbo-stream action="append" target="items-container">
+  <!--
+    The <template> tag holds the HTML to be appended.
+    We can use EJS here just like any other view!
+    The server renders this EJS file into pure HTML before sending it.
+  -->
+  <template>
+    <%- include('../partials/components/item', { item: item }) %>
+  </template>
+</turbo-stream>

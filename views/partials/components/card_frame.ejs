@@ -1,0 +1,7 @@
+<turbo-frame id="dynamic-component-frame">
+  <!--
+    Now, we include your original card partial.
+    We pass along the variables (title, content) from the route.
+  -->
+  <%- include('card', { title: title, content: content }) %>
+</turbo-frame>

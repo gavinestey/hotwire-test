@@ -1,0 +1,13 @@
+<!--
+  This is an EJS component. It's just a partial that
+  accepts local variables (like props).
+-->
+<div class="card">
+  <% if (locals.title) { %>
+    <h3 class="card-title"><%= title %></h3>
+  <% } %>
+
+  <% if (locals.content) { %>
+    <p class="card-content"><%= content %></p>
+  <% } %>
+</div>

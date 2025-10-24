@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page Title -->
+  <title><%= title %> | EJS Hotwire App</title>
+
+  <!-- Style Dictionary CSS Variables & Main Styles -->
+  <link rel="stylesheet" href="/css/main.css">
+
+  <!-- Google Font (from tokens) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Hotwire Turbo -->
+  <!-- This loads Turbo Drive (page navigation) and Turbo Frames -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@hotwired/turbo@8.0.4/dist/turbo.es2017-esm.js"></script>
+
+  <!-- Stimulus (Client-side JS controllers) -->
+  <!-- This loads our local Stimulus application -->
+  <script type="module" src="/js/application.js"></script>
+
+</head>
+<body>
+
+  <!-- Main Navigation -->
+  <%- include('navbar') %>
+
+  <!-- Main Content Area -->
+  <!-- express-ejs-layouts will inject the page content here -->
+  <main class="container">
+    <%- body %>
+  </main>
+
+</body>
+</html>

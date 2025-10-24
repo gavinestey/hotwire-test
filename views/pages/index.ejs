@@ -1,0 +1,48 @@
+<h2>Item List</h2>
+<p>This list is updated using Turbo Streams. Try adding an item!</p>
+
+<!--
+  This turbo-frame isolates the item list.
+  The <form> below will submit, and the server will send a
+  <turbo-stream> response to update the "items-container" *inside* this frame.
+-->
+<turbo-frame id="items-list-frame">
+  <!-- This div is the target for our Turbo Stream "append" action -->
+  <div id="items-container" class="item-list">
+    <% items.forEach(item => { %>
+      <!-- We render each item using another EJS component partial -->
+      <%- include('../partials/components/item', { item: item }) %>
+    <% }) %>
+  </div>
+</turbo-frame>
+
+<hr class="divider">
+
+<h3>Add New Item</h3>
+<!--
+  This form submission is automatically handled by Turbo.
+  It will be sent via fetch(), and it will process the
+  <turbo-stream> response from the server.
+-->
+<form action="/add-item" method="POST" class="item-form">
+  <div class="form-group">
+    <label for="itemName">Item Name:</label>
+    <input type="text" id="itemName" name="itemName" required>
+  </div>
+  <button type="submit" class="button">Add Item</button>
+</form>
+
+<hr class="divider">
+
+<h2>SSR EJS Component (via Turbo Frame)</h2>
+<p>This demonstrates lazy-loading a server-rendered component into a frame.</p>
+
+<!--
+  This <turbo-frame> will be empty at first.
+  The `src` attribute tells it to automatically make a GET request
+  to `/load-card-component` to fetch its content.
+-->
+<turbo-frame id="dynamic-component-frame" src="/load-card-component" class="dynamic-frame">
+  <!-- This content is a placeholder and will be replaced -->
+  <p>Loading component from server...</p>
+</turbo-frame>

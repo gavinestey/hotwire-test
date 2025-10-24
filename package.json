@@ -1,0 +1,31 @@
+{
+  "name": "ejs-hotwire-typescript",
+  "version": "1.0.0",
+  "description": "EJS, Hotwire, TypeScript, and Style Dictionary App",
+  "main": "dist/index.js",
+  "scripts": {
+    "build:ts": "tsc",
+    "build:css": "style-dictionary build --config ./style-dictionary.config.json",
+    "build": "npm run build:ts && npm run build:css",
+    "start": "node dist/index.js",
+    "dev:ts": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "dev": "npm run build:css && npm run dev:ts"
+  },
+  "dependencies": {
+    "@hotwired/stimulus": "^3.2.2",
+    "@hotwired/turbo": "^8.0.4",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-ejs-layouts": "^2.5.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/express-ejs-layouts": "^2.5.4",
+    "@types/node": "^20.12.12",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.0",
+    "style-dictionary": "^3.9.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}

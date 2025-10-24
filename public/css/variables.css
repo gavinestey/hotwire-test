@@ -1,0 +1,24 @@
+/**
+ * Do not edit directly
+ * Generated on Thu, 23 Oct 2025 23:10:04 GMT
+ */
+
+:root {
+  --border-radius: 8px;
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  --spacing-xl: 2rem;
+  --spacing-lg: 1.5rem;
+  --spacing-md: 1rem;
+  --spacing-sm: 0.5rem;
+  --spacing-xs: 0.25rem;
+  --spacing-base: 1rem;
+  --font-family-base: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --color-border-base: #dfe1e6;
+  --color-text-base: #172b4d;
+  --color-background-subtle: #f4f5f7;
+  --color-background-base: #ffffff;
+  --color-brand-secondary: #ff8b00;
+  --color-brand-primary: #0052cc;
+  --color-text-link: var(--color-brand-primary);
+  --color-background-surface: var(--color-background-base);
+}
